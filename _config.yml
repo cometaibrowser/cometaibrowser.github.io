@@ -1,0 +1,8 @@
+
+title: "Comet Browser Guide"
+description: "Chinese & English guides for Comet + Perplexity Pro."
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+url: "https://YOUR_USERNAME.github.io"
