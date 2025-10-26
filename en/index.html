@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+    <title>Comet Browser Guide: Activate Perplexity Pro for Free in 5 Steps</title>
+    <meta name="description" content="Follow this Comet browser guide to activate Perplexity Pro for free in just 5 steps, including preparation, registration, activation, and troubleshooting tips.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -45,7 +47,7 @@
         .lang-switcher {
             position: fixed;
             right: 20px;
-            bottom: 20px;
+            top: 20px;
             z-index: 10;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
@@ -55,6 +57,30 @@
         }
         .lang-switcher:hover {
             background-color: rgba(0, 0, 0, 0.9);
+        }
+        .step-list {
+            counter-reset: step-counter;
+        }
+        .step-item {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            background-color: #1d4ed8;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -88,6 +114,34 @@
     <div class="text-center mt-8">
         <a href="#quick-start-5-steps" class="cta-button bg-blue-600 hover:bg-blue-700">Quick Start 5 Steps</a>
     </div>
+
+    <section id="quick-start-5-steps" class="mt-12">
+        <h2 class="section-header">Quick Start: 5 Steps</h2>
+        <div class="bg-white rounded-2xl shadow p-8 mt-6">
+            <ol class="step-list">
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">Prepare Your Setup</h3>
+                    <p>Use a fresh email address and ensure your network can reliably access overseas sites. Have a stable proxy node ready (US or SG recommended).</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">Register via the Invite Link</h3>
+                    <p>Click “Accept Invite” above to reach the Perplexity site, sign up with your prepared email, and complete the email verification.</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">Install or Update Comet Browser</h3>
+                    <p>Download the latest Comet build, install it, and sign in with the invited email to sync your Pro eligibility.</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">Complete the First Launch Activation</h3>
+                    <p>On first launch, keep your connection stable. Wait for Perplexity to detect the invite and surface Pro access in Assistant.</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">Verify Access and Start Using</h3>
+                    <p>Trigger an Assistant conversation or search to confirm Pro quotas. If anything seems off, restart the browser or switch to another node.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="mt-12">
