@@ -31,21 +31,9 @@
       }
     }
 
-    // Inject floating switcher
-    var btn = document.createElement('div');
-    btn.id = 'lang-switcher';
-    btn.innerHTML = '<button type="button" id="to-cn">中文</button><button type="button" id="to-en">EN</button>';
-    document.body.appendChild(btn);
+    var switcher = document.getElementById('lang-switcher');
 
-    var style = document.createElement('style');
-    style.textContent = '#lang-switcher{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;gap:8px}'
-      + '#lang-switcher button{padding:10px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:700;'
-      + 'box-shadow:0 8px 24px rgba(0,0,0,.15)}'
-      + '#to-cn{background:linear-gradient(90deg,#22c55e,#3b82f6);color:#fff}'
-      + '#to-en{background:linear-gradient(90deg,#5CE1E6,#3B82F6);color:#fff}';
-    document.head.appendChild(style);
-
-    function go(to) {
+    function handlePreference(to) {
       localStorage.setItem(PREF_KEY, to);
       var loc = window.location;
       var current = loc.pathname;
@@ -60,8 +48,40 @@
       }
     }
 
-    document.getElementById('to-cn').onclick = function(){ go('cn'); };
-    document.getElementById('to-en').onclick = function(){ go('en'); };
+    if (switcher) {
+      switcher.addEventListener('click', function (event) {
+        var target = event.target.closest('[data-lang]');
+        if (!target) return;
+        var lang = (target.getAttribute('data-lang') || '').toLowerCase();
+        if (!lang) return;
+        var prefValue = lang === 'en' ? 'en' : 'cn';
+        event.preventDefault();
+        handlePreference(prefValue);
+      });
+    } else {
+      var FALLBACK_ID = 'lang-switcher-fallback';
+      var existingFallback = document.getElementById(FALLBACK_ID);
+      if (!existingFallback) {
+        var container = document.createElement('div');
+        container.id = FALLBACK_ID;
+        container.innerHTML = '<button type="button" data-lang="cn">中文</button><button type="button" data-lang="en">EN</button>';
+        document.body.appendChild(container);
+
+        var style = document.createElement('style');
+        style.textContent = '#'+FALLBACK_ID+'{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;gap:8px}' +
+          '#'+FALLBACK_ID+' button{padding:10px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:700;' +
+          'box-shadow:0 8px 24px rgba(0,0,0,.15);background:linear-gradient(90deg,#5CE1E6,#3B82F6);color:#fff}' +
+          '#'+FALLBACK_ID+' button[data-lang="cn"]{background:linear-gradient(90deg,#22c55e,#3b82f6);}';
+        document.head.appendChild(style);
+
+        container.addEventListener('click', function (event) {
+          var btn = event.target.closest('button[data-lang]');
+          if (!btn) return;
+          var lang = btn.getAttribute('data-lang') === 'en' ? 'en' : 'cn';
+          handlePreference(lang);
+        });
+      }
+    }
   } catch(e) {
     console.error('lang switcher error', e);
   }
