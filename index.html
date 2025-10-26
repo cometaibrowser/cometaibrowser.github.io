@@ -3,6 +3,8 @@
 <html lang="zh-CN">
 
 <head>
+    <title>Comet 浏览器教程：快速开通 Perplexity Pro 免费会员</title>
+    <meta name="description" content="使用 Comet 浏览器 5 步快速开通 Perplexity Pro 免费会员，包含准备、注册、激活和常见问题解答。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -45,7 +47,7 @@
         .lang-switcher {
             position: fixed;
             right: 20px;
-            bottom: 20px;
+            top: 20px;
             z-index: 10;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
@@ -55,6 +57,30 @@
         }
         .lang-switcher:hover {
             background-color: rgba(0, 0, 0, 0.9);
+        }
+        .step-list {
+            counter-reset: step-counter;
+        }
+        .step-item {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            background-color: #1d4ed8;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -88,6 +114,34 @@
     <div class="text-center mt-8">
         <a href="#快速开通" class="cta-button bg-blue-600 hover:bg-blue-700">快速开通 5 步</a>
     </div>
+
+    <section id="快速开通" class="mt-12">
+        <h2 class="section-header">快速开通 5 步</h2>
+        <div class="bg-white rounded-2xl shadow p-8 mt-6">
+            <ol class="step-list">
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">准备工具</h3>
+                    <p>使用全新邮箱，确保网络可稳定访问海外站点；建议提前准备科学上网节点（推荐美国或新加坡）。</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">通过邀请链接注册</h3>
+                    <p>点击上方“立即接受邀请”进入 Perplexity 官网，使用准备好的邮箱注册并完成邮箱验证。</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">安装或更新 Comet 浏览器</h3>
+                    <p>前往 Comet 官网下载最新版本，安装完成后使用刚注册的邮箱登录以同步邀请状态。</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">完成首登激活</h3>
+                    <p>首次启动 Comet 时确保网络稳定，等待 Perplexity 自动识别邀请并在 Assistant 中显示 Pro 权限。</p>
+                </li>
+                <li class="step-item">
+                    <h3 class="text-xl font-semibold mb-2">验证功能并开始使用</h3>
+                    <p>在 Assistant 中发起一次对话或搜索，确认额度显示为 Pro；如遇异常，请重启浏览器或更换节点重试。</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="mt-12">
