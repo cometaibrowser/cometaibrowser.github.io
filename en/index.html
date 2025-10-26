@@ -78,27 +78,6 @@
             color: #1f2937;
             cursor: default;
         }
-        .image-placeholder {
-            width: min(100%, 960px);
-            height: 320px;
-            margin: 0 auto 1.5rem;
-            border: 2px dashed #cbd5f5;
-            border-radius: 24px;
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(59, 130, 246, 0.05),
-                rgba(59, 130, 246, 0.05) 20px,
-                rgba(59, 130, 246, 0.08) 20px,
-                rgba(59, 130, 246, 0.08) 40px
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4b5563;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 1rem;
-        }
         .step-list {
             counter-reset: step-counter;
         }
@@ -123,6 +102,12 @@
             justify-content: center;
             font-weight: 600;
         }
+        .step-image {
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 1.25rem;
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+        }
     </style>
 </head>
 
@@ -135,10 +120,12 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="relative">
-    <div class="image-placeholder" role="img" aria-label="Comet Browser & Perplexity Pro hero placeholder">
-        Hero image placeholder (to be updated)
-    </div>
+<section class="relative px-6">
+    <img
+        src="/assets/hero-comet-en.png"
+        alt="Comet browser with Perplexity Pro tutorial hero artwork"
+        class="hero-image mx-auto rounded-3xl shadow-xl"
+    />
 </section>
 
 <!-- Main Content Section -->
@@ -166,22 +153,27 @@
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Prepare Your Setup</h3>
                     <p>Use a fresh email address and ensure your network can reliably access overseas sites. Have a stable proxy node ready (US or SG recommended).</p>
+                    <img src="/assets/step1-en.png" alt="Prepare a fresh email and stable proxy" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Register via the Invite Link</h3>
                     <p>Click “Accept Invite” above to reach the Perplexity site, sign up with your prepared email, and complete the email verification.</p>
+                    <img src="/assets/step2-en.png" alt="Accept the Perplexity invite link and sign up" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Install or Update Comet Browser</h3>
                     <p>Download the latest Comet build, install it, and sign in with the invited email to sync your Pro eligibility.</p>
+                    <img src="/assets/step3-en.png" alt="Install the latest Comet browser release" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Complete the First Launch Activation</h3>
                     <p>On first launch, keep your connection stable. Wait for Perplexity to detect the invite and surface Pro access in Assistant.</p>
+                    <img src="/assets/step4-en.png" alt="Wait for Perplexity Pro activation on first launch" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Verify Access and Start Using</h3>
                     <p>Trigger an Assistant conversation or search to confirm Pro quotas. If anything seems off, restart the browser or switch to another node.</p>
+                    <img src="/assets/step5-en.png" alt="Confirm Perplexity Pro quota inside Assistant" class="step-image" loading="lazy" />
                 </li>
             </ol>
         </div>
