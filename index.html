@@ -78,27 +78,6 @@
             color: #1f2937;
             cursor: default;
         }
-        .image-placeholder {
-            width: min(100%, 960px);
-            height: 320px;
-            margin: 0 auto 1.5rem;
-            border: 2px dashed #cbd5f5;
-            border-radius: 24px;
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(59, 130, 246, 0.05),
-                rgba(59, 130, 246, 0.05) 20px,
-                rgba(59, 130, 246, 0.08) 20px,
-                rgba(59, 130, 246, 0.08) 40px
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4b5563;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 1rem;
-        }
         .step-list {
             counter-reset: step-counter;
         }
@@ -123,6 +102,12 @@
             justify-content: center;
             font-weight: 600;
         }
+        .step-image {
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 1.25rem;
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+        }
     </style>
 </head>
 
@@ -135,10 +120,12 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="relative">
-    <div class="image-placeholder" role="img" aria-label="Comet 浏览器与 Perplexity 教程主视觉占位图">
-        主视觉占位图（稍后更新）
-    </div>
+<section class="relative px-6">
+    <img
+        src="/assets/hero-comet.png"
+        alt="Comet 浏览器配合 Perplexity Pro 教程主视觉"
+        class="hero-image mx-auto rounded-3xl shadow-xl"
+    />
 </section>
 
 <!-- Main Content Section -->
@@ -166,22 +153,27 @@
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">准备工具</h3>
                     <p>使用全新邮箱，确保网络可稳定访问海外站点；建议提前准备科学上网节点（推荐美国或新加坡）。</p>
+                    <img src="/assets/step1.png" alt="注册前准备新邮箱与稳定网络" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">通过邀请链接注册</h3>
                     <p>点击上方“立即接受邀请”进入 Perplexity 官网，使用准备好的邮箱注册并完成邮箱验证。</p>
+                    <img src="/assets/step2.png" alt="通过邀请链接进入 Perplexity 并接受邀请" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">安装或更新 Comet 浏览器</h3>
                     <p>前往 Comet 官网下载最新版本，安装完成后使用刚注册的邮箱登录以同步邀请状态。</p>
+                    <img src="/assets/step3.png" alt="下载并安装最新版 Comet 浏览器" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">完成首登激活</h3>
                     <p>首次启动 Comet 时确保网络稳定，等待 Perplexity 自动识别邀请并在 Assistant 中显示 Pro 权限。</p>
+                    <img src="/assets/step4.png" alt="首次启动 Comet 浏览器并等待激活" class="step-image" loading="lazy" />
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">验证功能并开始使用</h3>
                     <p>在 Assistant 中发起一次对话或搜索，确认额度显示为 Pro；如遇异常，请重启浏览器或更换节点重试。</p>
+                    <img src="/assets/step5.png" alt="在 Assistant 中确认获得 Perplexity Pro 权限" class="step-image" loading="lazy" />
                 </li>
             </ol>
         </div>
