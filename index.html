@@ -78,6 +78,30 @@
             color: #1f2937;
             cursor: default;
         }
+        .highlight-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, #f97316, #fb923c);
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .highlight-link:hover,
+        .highlight-link:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 30px rgba(249, 115, 22, 0.45);
+            color: #ffffff;
+            outline: none;
+        }
+        .highlight-link svg {
+            width: 1rem;
+            height: 1rem;
+        }
         .step-list {
             counter-reset: step-counter;
         }
@@ -144,7 +168,12 @@
             <ol class="step-list">
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">准备工具</h3>
-                    <p>使用全新邮箱，确保网络可稳定访问海外站点；建议提前准备科学上网节点（推荐美国或新加坡）。</p>
+                    <p>使用全新邮箱，确保网络可稳定访问海外站点；建议提前准备科学上网节点（推荐美国或新加坡）。如果暂时没有合适的节点，可以前往 <a href="https://justmysockss3.net/" target="_blank" rel="noopener" class="highlight-link" aria-label="打开 Just My Socks 购买页面">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5H21m0 0v7.5m0-7.5L12 13.5m-1.5-6h-6A1.5 1.5 0 003 9v9a1.5 1.5 0 001.5 1.5h9A1.5 1.5 0 0015 18v-6" />
+                        </svg>
+                        Just My Socks
+                    </a> 购买。</p>
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">通过邀请链接注册</h3>
