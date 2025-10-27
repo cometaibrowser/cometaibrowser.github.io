@@ -44,6 +44,22 @@
         .cta-button:hover {
             background-color: #005bb5;
         }
+        .hook-link {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #f97316, #ec4899);
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 6px 14px rgba(236, 72, 153, 0.3);
+        }
+        .hook-link:hover,
+        .hook-link:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.35);
+        }
         .lang-switcher {
             position: fixed;
             right: 20px;
@@ -144,7 +160,7 @@
             <ol class="step-list">
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Prepare Your Setup</h3>
-                    <p>Use a fresh email address and ensure your network can reliably access overseas sites. Have a stable proxy node ready (US or SG recommended).</p>
+                    <p>Use a fresh email address and ensure your network can reliably access overseas sites. Have a stable proxy node ready (US or SG recommended). Missing one? You can grab a plan from <a href="https://justmysockss3.net/" target="_blank" rel="noopener" class="hook-link">Just My Socks</a>.</p>
                 </li>
                 <li class="step-item">
                     <h3 class="text-xl font-semibold mb-2">Register via the Invite Link</h3>
